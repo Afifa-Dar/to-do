@@ -1,4 +1,3 @@
-console.log("script")
 var item = document.getElementById("inputElement");
 var btn = document.getElementById("btn")
 var container = document.getElementById("parent");
@@ -58,9 +57,7 @@ function deleteItem(e) {
   let text = e.target.parentElement.innerText;
   text = text.slice(0, text.length - 1)
   arr.splice(arr.indexOf(text),1)
-  console.log(arr)
   localStorage.setItem("items",JSON.stringify(arr))
- document.location.reload(true)
 }
 
 window.addEventListener("load", displayItem)
